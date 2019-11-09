@@ -73,6 +73,7 @@ function partySelection (props){
           </div>
         </div>
       </header>
+      <br></br>
     </div>
   )
 }

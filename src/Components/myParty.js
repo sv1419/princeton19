@@ -29,27 +29,28 @@ function myParty (props){
 
       <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
-          <img class="masthead-avatar mb-5" src="img/DRIFT-logo.png" alt=""></img>
-
           <div class="divider-custom divider-light">
-            <form>
-              Full Name:<br></br>
-              <input type="text" name="name" id="name"></input><br></br>
-              Email:<br></br>
-              <input type="text" name="email" id="email"></input><br></br>
-              Password:<br></br>
-              <input type="text" name="password" id="password"></input><br></br>
-              Phone Number:<br></br>
-              <input type="text" name="phone" id="phone"></input><br></br>
-            </form>
-            <br></br>
-            <div class="container">
-                <a href="profile.html"><button type="submit" class="btn btn-secondary btn-xl btn-block" id="sendMessageButton">Log In</button></a>
-                &nbsp;
-            </div>
+            <nav class="menu">
+          		<input type="checkbox" href="#" name="expandmenu" id="expandmenu" class="expandmenu"></imput>
+          		<label class="expandmenu-button" for="expandmenu">
+              <img style="border-radius:50%" width="80" height="80" src="img/serenaBig.jpg"></img>
+          		</label>
+          		<a href="location.html" class="menu-item col1"><i><img style="border-radius:50%" width="80" height="80" src="img/claudia.jpg"></img></i></a>
+          		<a href="location.html" class="menu-item col3"><i><img style="border-radius:50%" width="80" height="80" src="img/denise.png"></img></i></a>
+          		<a href="location.html" class="menu-item col6"><i><img style="border-radius:50%" width="80" height="80" src="img/jordan.png"></img></i></a>
+          	</nav>
           </div>
+          <h1>Party in Progress!</h1>
+          <a>Click on profile to check on your friends!</a>
         </div>
       </header>
+      <footer>
+        <div class="container">
+          <button class="btn btn-secondary btn-xl btn-block" id="sendMessageButton">PANIC </button>
+          <a style="color:'black' "href=# id="endParty">End Your Party</a>
+        </div>
+      </footer>
+      <br></br>
     </div>
   )
 }

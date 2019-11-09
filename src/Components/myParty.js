@@ -31,7 +31,7 @@ function myParty (props){
         <div class="container d-flex align-items-center flex-column">
           <div class="divider-custom divider-light">
             <nav class="menu">
-          		<input type="checkbox" href="#" name="expandmenu" id="expandmenu" class="expandmenu"></imput>
+          		<input type="checkbox" name="expandmenu" id="expandmenu" class="expandmenu"></input>
           		<label class="expandmenu-button" for="expandmenu">
               <img style="border-radius:50%" width="80" height="80" src="img/serenaBig.jpg"></img>
           		</label>
@@ -47,7 +47,7 @@ function myParty (props){
       <footer>
         <div class="container">
           <button class="btn btn-secondary btn-xl btn-block" id="sendMessageButton">PANIC </button>
-          <a style="color:'black' "href=# id="endParty">End Your Party</a>
+          <a style="color:'black'" id="endParty">End Your Party</a>
         </div>
       </footer>
       <br></br>

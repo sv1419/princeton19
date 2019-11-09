@@ -29,7 +29,7 @@ function partySelection (props){
 
       <header class="masthead bg-primary text-black text-center">
         <div class="container d-flex align-items-center flex-column">
-          <img style="border-radius:50%" width="200" height="200" src="img/serena.jpg" alt=""></img>
+          <img class='fun-menu' src="img/serena.jpg" alt=""></img>
           <div class="divider-custom divider-light">
             <div class="container my-4">
               <p class="font-weight-bold">Select Your Party</p>
@@ -73,6 +73,7 @@ function partySelection (props){
           </div>
         </div>
       </header>
+      <br></br>
     </div>
   )
 }

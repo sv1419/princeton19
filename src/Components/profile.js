@@ -58,10 +58,10 @@ function profile (props){
         </div>
       </header>
       <footer>
-        <div class={'/partySelection'}>
-          <button type="submit" class="btn btn-secondary btn-xl btn-block" id="sendMessageButton">
+        <div>
+          <a href={'/partySelection'}><button type="submit" class="btn btn-secondary btn-xl btn-block" id="sendMessageButton">
           Start Your Party
-          </button>
+          </button></a>
         </div>
       </footer>
     </div>

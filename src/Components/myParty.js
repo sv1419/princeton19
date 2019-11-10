@@ -1,6 +1,11 @@
 import React from 'react';
 import '../App.css';
 import '../fontawesome-free/css/all.min.css';
+import claudia from './img/claudia.jpg';
+import yang from './img/yang.png';
+import denise from './img/denise.png';
+import serena from './img/serenaBig.jpg';
+
 
 function myParty (props){
   return(
@@ -31,13 +36,12 @@ function myParty (props){
         <div class="container d-flex align-items-center flex-column">
           <div class="divider-custom divider-light">
             <nav class="menu">
-          		<input type="checkbox" name="expandmenu" id="expandmenu" class="expandmenu"></input>
-          		<label class="expandmenu-button" for="expandmenu">
-              <img style="border-radius:50%" width="80" height="80" src="img/serenaBig.jpg"></img>
-          		</label>
-          		<a href="location.html" class="menu-item col1"><i><img style="border-radius:50%" width="80" height="80" src="img/claudia.jpg"></img></i></a>
-          		<a href="location.html" class="menu-item col3"><i><img style="border-radius:50%" width="80" height="80" src="img/denise.png"></img></i></a>
-          		<a href="location.html" class="menu-item col6"><i><img style="border-radius:50%" width="80" height="80" src="img/jordan.png"></img></i></a>
+            <label class="expandmenu-button" for="expandmenu">
+              <img class='fun-menu' src={serena}></img>
+            </label>
+              <a href={'/friendProfile'} class="menu-item col1" class='fun-menu'><i><img src={claudia}></img></i></a>
+              <a href={'/friendProfile'} class="menu-item col2" class='fun-menu'><i><img src={yang}></img></i></a>
+              <a href={'/friendProfile'} class="menu-item col3" class='fun-menu'><i><img src={denise}></img></i></a>
           	</nav>
           </div>
           <h1>Party in Progress!</h1>
@@ -47,7 +51,7 @@ function myParty (props){
       <footer>
         <div class="container">
           <button class="btn btn-secondary btn-xl btn-block" id="sendMessageButton">PANIC </button>
-          <a style="color:'black'" id="endParty">End Your Party</a>
+          <a id="endParty">End Your Party</a>
         </div>
       </footer>
       <br></br>

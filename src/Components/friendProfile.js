@@ -4,7 +4,7 @@ import '../party.css';
 import '../fontawesome-free/css/all.min.css';
 import claudia from './img/claudia.jpg';
 
-
+import swal from 'sweetalert';
 
 
 
@@ -18,9 +18,18 @@ function friendProfile (props){
     Http.open("GET", url);
     Http.send();
     Http.onreadystatechange = (e) => {
-    console.log(Http.responseText)
-}
+      console.log(Http.responseText)
+    }
   }
+  var geolocation = require('geolocation')
+
+  geolocation.getCurrentPosition(function (err, position) {
+    if (err) throw err
+      console.log(position.coords);
+      swal("Their location is \n" + "Latitude: " + position.coords.latitude + "\n" + "Longitude: " + position.coords.longitude);
+  })
+
+
   return(
     <div>
       <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
@@ -51,8 +60,6 @@ function friendProfile (props){
         </div>
         <h1>Claudia Rodriguez</h1>
       </header>
-      <h2>Current Location:</h2>
-      <div id="map"></div>
       <footer>
         <div class="container">
           <div class="buttons">

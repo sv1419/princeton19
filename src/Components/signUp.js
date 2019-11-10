@@ -4,7 +4,7 @@ import '../App.css';
 import '../fontawesome-free/css/all.min.css';
 import logo from './img/gluuLogo.png';
 import firestore from "./firestore";
-import firebase from 'firebase';
+var firebase = require('firebase');
 
 
 class signUp extends React.Component{

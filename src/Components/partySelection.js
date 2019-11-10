@@ -32,7 +32,7 @@ function partySelection (props){
 
       <header class="masthead bg-primary text-black text-center">
         <div class="container d-flex align-items-center flex-column">
-          <img class='fun-menu' options={{ width: 200 }} src={serena}></img>
+          <img class="masthead-avatar mb-5 image" src={serena}></img>
           <div class="divider-custom divider-light">
             <div class="container my-4">
               <p class="font-weight-bold">Select Your Party</p>

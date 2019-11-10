@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import '../App2.css';
-import logo from './img/DRIFT-logo.png';
+import logo from './img/gluuLogo.png';
 import '../fontawesome-free/css/all.min.css';
 
 
@@ -9,9 +9,9 @@ class Home extends Component{
   render(){
     return(
       <div className="App">
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
           <div class="container">
-            <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               Menu
               &nbsp;
               <i class="fas fa-bars"></i>
@@ -33,7 +33,7 @@ class Home extends Component{
         </nav>
 
 
-        <header class="masthead bg-primary text-white text-center">
+        <header class="masthead text-center">
           <div class="container d-flex align-items-center flex-column">
 
             <img class="masthead-avatar mb-5" src={logo} alt="logo"></img>
@@ -42,9 +42,9 @@ class Home extends Component{
 
             <div class="divider-custom divider-light">
               <div class="container">
-                <a href="#"><button type="submit" class="btn btn-secondary btn-xl btn-block" id="sendMessageButton">Log In</button></a>
+                <a href="#" class="button1">Log In</a>
                 &nbsp;
-                <a href={'/signUp'}><button type="submit" class="btn btn-secondary btn-xl btn-block" id="sendMessageButton">Sign Up</button></a>
+                <a href={'/signUp'} class="button1">Sign Up</a>
               </div>
             </div>
           </div>

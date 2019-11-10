@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 import '../fontawesome-free/css/all.min.css';
 import serena from './img/serenaBig.jpg';
-import ResizeImage from 'react-resize-image';
+
 
 
 function partySelection (props){

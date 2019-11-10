@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.css';
 import '../fontawesome-free/css/all.min.css';
 import serena from './img/serenaBig.jpg';
+import ResizeImage from 'react-resize-image';
 
 
 function partySelection (props){
@@ -31,7 +32,7 @@ function partySelection (props){
 
       <header class="masthead bg-primary text-black text-center">
         <div class="container d-flex align-items-center flex-column">
-          <img class='fun-menu' src={serena} alt=""></img>
+          <img class='fun-menu' options={{ width: 200 }} src={serena}></img>
           <div class="divider-custom divider-light">
             <div class="container my-4">
               <p class="font-weight-bold">Select Your Party</p>

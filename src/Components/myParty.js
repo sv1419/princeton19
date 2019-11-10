@@ -2,12 +2,24 @@ import React from 'react';
 import '../App.css';
 import '../fontawesome-free/css/all.min.css';
 import claudia from './img/claudia.jpg';
-import yang from './img/yang.png';
+import jordan from './img/jordan.png';
 import denise from './img/denise.png';
 import serena from './img/serenaBig.jpg';
 
 
+
 function myParty (props){
+  function sendMessageButton(e) {
+    e.preventDefault();
+    const Http = new XMLHttpRequest();
+    const url='https://svanchiro.api.stdlib.com/http-twilio@dev/exampleText/';
+    Http.open("GET", url);
+    Http.send();
+    Http.onreadystatechange = (e) => {
+    console.log(Http.responseText)
+}
+  }
+
   return(
     <div>
       <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
@@ -34,23 +46,28 @@ function myParty (props){
 
       <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
-          <div class="divider-custom divider-light">
-            <nav class="menu">
-            <label class="expandmenu-button" for="expandmenu">
-              <img class='fun-menu' src={serena}></img>
-            </label>
-              <a href={'/friendProfile'} class="menu-item col1" class='fun-menu'><i><img src={claudia}></img></i></a>
-              <a href={'/friendProfile'} class="menu-item col2" class='fun-menu'><i><img src={yang}></img></i></a>
-              <a href={'/friendProfile'} class="menu-item col3" class='fun-menu'><i><img src={denise}></img></i></a>
-          	</nav>
+          <div>
+            <div class="divider-custom divider-light">
+              <nav class="menu">
+                <input type="checkbox" href="#" name="expandmenu" id="expandmenu" class="expandmenu"></input>
+                <label class="expandmenu-button" for="expandmenu">
+                  <img class='fun-menu' src={serena}></img>
+                </label>
+                <a href="#" class="menu-item col1"><i><img class='fun-menu' src={claudia}></img></i></a>
+                <a href="#" class="menu-item col3"><i><img class='fun-menu' src={denise}></img></i></a>
+                <a href="#" class="menu-item col6"><i><img class='fun-menu' src={jordan}></img></i></a>
+              </nav>
+            </div>
           </div>
-          <h1>Party in Progress!</h1>
-          <a>Click on profile to check on your friends!</a>
+          <h1>Welcome Serena!</h1>
+          <a>Click on your icon to see your closest friends</a>
         </div>
       </header>
       <footer>
         <div class="container">
-          <button class="btn btn-secondary btn-xl btn-block" id="sendMessageButton">PANIC </button>
+          <button class="btn btn-secondary btn-xl btn-block" onClick={sendMessageButton}>PANIC </button>
+          <br></br>
+          <br></br>
           <a id="endParty">End Your Party</a>
         </div>
       </footer>
@@ -58,4 +75,5 @@ function myParty (props){
     </div>
   )
 }
+
 export default myParty;

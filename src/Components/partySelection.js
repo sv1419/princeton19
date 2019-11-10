@@ -1,6 +1,9 @@
 import React from 'react';
 import '../App.css';
 import '../fontawesome-free/css/all.min.css';
+import serena from './img/serenaBig.jpg';
+import ResizeImage from 'react-resize-image';
+
 
 function partySelection (props){
   return(
@@ -29,7 +32,7 @@ function partySelection (props){
 
       <header class="masthead bg-primary text-black text-center">
         <div class="container d-flex align-items-center flex-column">
-          <img class='fun-menu' src="img/serena.jpg" alt=""></img>
+          <img class="masthead-avatar mb-5 image" src={serena}></img>
           <div class="divider-custom divider-light">
             <div class="container my-4">
               <p class="font-weight-bold">Select Your Party</p>
@@ -42,7 +45,7 @@ function partySelection (props){
                 </li>
                 <li class="list-group-item">
                   <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="check2"></input>
+                    <input label="Filled-in unchecked" type="checkbox" class="custom-control-input" id="check2"></input>
                     <label class="custom-control-label" for="check2">Jordan Beloosesky</label>
                   </div>
                 </li>

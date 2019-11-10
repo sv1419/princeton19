@@ -53,7 +53,7 @@ function myParty (props){
                 <label class="expandmenu-button" for="expandmenu">
                   <img class='fun-menu' src={serena}></img>
                 </label>
-                <a href="#" class="menu-item col1"><i><img class='fun-menu' src={claudia}></img></i></a>
+                <a href={'/friendProfile'} class="menu-item col1"><i><img class='fun-menu' src={claudia}></img></i></a>
                 <a href="#" class="menu-item col3"><i><img class='fun-menu' src={denise}></img></i></a>
                 <a href="#" class="menu-item col6"><i><img class='fun-menu' src={jordan}></img></i></a>
               </nav>

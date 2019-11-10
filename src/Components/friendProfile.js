@@ -4,7 +4,7 @@ import '../party.css';
 import '../fontawesome-free/css/all.min.css';
 import claudia from './img/claudia.jpg';
 
-
+import swal from 'sweetalert';
 
 
 
@@ -18,43 +18,16 @@ function friendProfile (props){
     Http.open("GET", url);
     Http.send();
     Http.onreadystatechange = (e) => {
-    console.log(Http.responseText)
-}
+      console.log(Http.responseText)
+    }
   }
+  var geolocation = require('geolocation')
 
-  var map, infoWindow;
-    function initMap() {
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 20
-      });
-      infoWindow = new google.maps.InfoWindow;
-      // Try HTML5 geolocation.
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-          var pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-          };
-          infoWindow.setPosition(pos);
-          infoWindow.setContent('Location found.');
-          infoWindow.open(map);
-          map.setCenter(pos);
-        }, function() {
-          handleLocationError(true, infoWindow, map.getCenter());
-        });
-      } else {
-        // Browser doesn't support Geolocation
-        handleLocationError(false, infoWindow, map.getCenter());
-      }
-    }
-    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-      infoWindow.setPosition(pos);
-      infoWindow.setContent(browserHasGeolocation ?
-                            'Error: The Geolocation service failed.' :
-                            'Error: Your browser doesn\'t support geolocation.');
-      infoWindow.open(map);
-    }
+  geolocation.getCurrentPosition(function (err, position) {
+    if (err) throw err
+      console.log(position.coords);
+      swal("Their location is \n" + "Latitude: " + position.coords.latitude + "\n" + "Longitude: " + position.coords.longitude);
+  })
 
 
   return(
@@ -87,8 +60,6 @@ function friendProfile (props){
         </div>
         <h1>Claudia Rodriguez</h1>
       </header>
-      <h2>Current Location:</h2>
-      <div id="map"></div>
       <footer>
         <div class="container">
           <div class="buttons">

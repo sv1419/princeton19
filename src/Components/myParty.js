@@ -68,7 +68,7 @@ function myParty (props){
           <button class="btn btn-secondary btn-xl btn-block" onClick={sendMessageButton}>PANIC </button>
           <br></br>
           <br></br>
-          <a id="endParty">End Your Party</a>
+          <a id="endParty" href={'/profile'}>End Your Party</a>
         </div>
       </footer>
       <br></br>

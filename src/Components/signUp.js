@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 import '../fontawesome-free/css/all.min.css';
-import logo from './img/DRIFT-logo.png';
+import logo from './img/gluuLogo.png';
 import firestore from "./firestore";
 import firebase from 'firebase';
 

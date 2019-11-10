@@ -5,30 +5,53 @@ import serena from './img/serenaBig.jpg';
 import ResizeImage from 'react-resize-image';
 
 
-function partySelection (props){
+class partySelection extends React.Component{
+  constructor(props) {
+    super(props);
+    this.toggleNavbar = this.toggleNavbar.bind(this);
+    this.state = {
+      collapsed: true,
+    };
+  }
+  toggleNavbar() {
+    this.setState({
+      collapsed: !this.state.collapsed,
+    });
+  }
+  render(){
+    const collapsed = this.state.collapsed;
+
+    const classOne = collapsed ? 'collapse navbar-collapse text-uppercase' : 'collapse navbar-collapse show';
+    const classTwo = collapsed ? 'navbar-toggler navbar-toggler-right collapsed' : 'navbar-toggler navbar-toggler-right';
   return(
     <div>
-      <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-        <div class="container">
-          <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <nav className="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top">
+      <div className="container" class="">
+        <a className="navbar-brand" href="#"></a>
+          <div align="left">
+          <button onClick={this.toggleNavbar} className={`${classTwo}`} type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
+            &nbsp;
             <i class="fas fa-bars"></i>
+            <span className="navbar-toggler-icon" />
           </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
+          </div>
+
+          <div className={`${classOne}`} id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">My Account</a>
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger">My Account</a>
               </li>
               <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger">About</a>
               </li>
               <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger">Contact</a>
               </li>
             </ul>
           </div>
-        </div>
-      </nav>
+      </div>
+    </nav>
 
       <header class="masthead bg-primary text-black text-center">
         <div class="container d-flex align-items-center flex-column">
@@ -69,9 +92,8 @@ function partySelection (props){
                 </li>
               </ul>
               &nbsp;
-              <div class="container">
-                <a href={'/myParty'}><button type="submit" class="btn btn-secondary btn-xl btn-block" id="sendMessageButton">Start Your Party</button></a>
-              </div>
+                <br></br>
+                <a href={'/myParty'} class="button1">Start your party!</a>
             </div>
           </div>
         </div>
@@ -80,4 +102,7 @@ function partySelection (props){
     </div>
   )
 }
+}
+
+
 export default partySelection;

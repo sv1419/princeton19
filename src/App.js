@@ -9,7 +9,6 @@ import MyParty from './Components/myParty';
 import PartySelection from './Components/partySelection';
 import Profile from './Components/profile';
 
-
 function App() {
   return (
     <div className="App">
